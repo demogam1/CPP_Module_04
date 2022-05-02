@@ -6,7 +6,7 @@
 /*   By: misaev <misaev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:06:48 by misaev            #+#    #+#             */
-/*   Updated: 2022/03/31 11:55:27 by misaev           ###   ########.fr       */
+/*   Updated: 2022/05/02 11:12:25 by misaev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Cat::Cat(const Cat &p)
 
 Cat &Cat::operator=(const Cat &p)
 {
+    delete this->idea;
     this->type = p.type;
     this->idea = new Brain(*p.idea);
     return *this;

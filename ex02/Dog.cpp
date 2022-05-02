@@ -6,7 +6,7 @@
 /*   By: misaev <misaev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 18:06:53 by misaev            #+#    #+#             */
-/*   Updated: 2022/03/31 11:55:20 by misaev           ###   ########.fr       */
+/*   Updated: 2022/05/02 11:12:22 by misaev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ Dog::Dog(const Dog &p)
 
 Dog &Dog::operator=(const Dog &p)
 {
+    delete this->idea;
     this->type = p.type;
     this->idea = new Brain(*p.idea);
     return *this;
