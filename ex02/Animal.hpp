@@ -6,7 +6,7 @@
 /*   By: misaev <misaev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 19:26:39 by misaev            #+#    #+#             */
-/*   Updated: 2022/04/01 20:38:38 by misaev           ###   ########.fr       */
+/*   Updated: 2022/05/04 09:00:20 by misaev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,10 @@ class Animal
         Animal();
         Animal(const Animal &p);
         Animal &operator=(const Animal &p);
-        virtual ~Animal() = 0;
+        virtual ~Animal();
         /* END */
         std::string getType() const;
-        virtual void makeSound() const;
+        virtual void makeSound() const = 0;
     protected:
         std::string type;
 };
